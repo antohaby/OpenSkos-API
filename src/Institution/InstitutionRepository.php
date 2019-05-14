@@ -2,11 +2,20 @@
 
 namespace App\Institution;
 
-interface  InstitutionRepository {
+use App\OpenSkos\OpenSkosRepository;
+use App\OpenSkos\Namespaces;
+
+class  InstitutionRepository extends OpenSkosRepository{
+
+    private $predicate = Namespaces\OpenSkos::TENANT;
+
     /**
      * @return Institution[]
      */
+    /*
     function all() : array ;
+    */
+
 
 
 }

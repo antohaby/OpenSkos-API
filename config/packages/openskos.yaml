@@ -4,10 +4,12 @@ services:
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
 
-    App\Institution\Controller\:
-        resource: '../../src/Institution/Controller/*'
-        tags: ['controller.service_arguments']
+    App\OpenSkos\EasyRdf\Client:
+        arguments:
+            $queryUri: '%query_uri%'
+            $updateUri: '%update_uri%'
 
 
-    App\Institution\InstitutionRepository: ~
+    App\OpenSkos\Entities\SparqlResourceManager:
+        autowire: true
 

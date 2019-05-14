@@ -1,4 +1,7 @@
 {
+    "benestar/asparagus": {
+        "version": "0.4.2"
+    },
     "composer/ca-bundle": {
         "version": "1.1.4"
     },
@@ -43,6 +46,9 @@
     },
     "doctrine/reflection": {
         "version": "v1.0.0"
+    },
+    "easyrdf/easyrdf": {
+        "version": "0.9.1"
     },
     "friendsofphp/php-cs-fixer": {
         "version": "2.2",

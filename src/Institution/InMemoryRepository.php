@@ -4,7 +4,7 @@ namespace App\Institution;
 
 use App\Rdf\Triple;
 
-final class InMemoryRepository implements InstitutionRepository {
+final class InMemoryRepository extends InstitutionRepository {
 
     /**
      * @return Institution[]

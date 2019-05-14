@@ -19,9 +19,10 @@ final class Institution
      * @param InstitutionRepository $repository
      * @return JsonResponse
      */
-    public function institutions(InstitutionRepository $repository, Pagination $pagination) : JsonResponse
+    public function institutions(InstitutionRepository $repository) : JsonResponse
     {
-        $institutions = $repository->all();
+
+        $institutions = $repository->findAll();
         $properties = [];
         foreach ($institutions as $institution) {
             $properties[] = $institution->properties();
