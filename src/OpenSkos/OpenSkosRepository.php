@@ -23,6 +23,8 @@ class  OpenSkosRepository {
     }
 
     public function findAll(){
+        $object = $this->resource->fetchByUri('<http://tenant/c38d8779-02e7-40d0-bd08-4a60a42b4814>');
+        return $object;
         //return $this->resource->;
     }
 

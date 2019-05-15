@@ -1,4 +1,4 @@
 parameters:
-  query_uri: 'http://192.168.56.10:3030/beg-openskos-production/query'
-  update_uri: 'http://192.168.56.10:3030/beg-openskos-production/update'
+  query_uri: 'http://192.168.56.10:3030/cleandata3/query'
+  update_uri: 'http://192.168.56.10:3030/cleandata3/update'
 

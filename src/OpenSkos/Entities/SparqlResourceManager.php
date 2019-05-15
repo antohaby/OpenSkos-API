@@ -9,6 +9,21 @@ use App\OpenSkos\Namespaces;
 class SparqlResourceManager
 {
     /**
+     * @var Client
+     */
+    private $client;
+
+    /**
+     * SparqlResourceManager constructor.
+     * @param Client $client
+     */
+    public function __construct(Client $client)
+    {
+        $this->client = $client;
+    }
+
+
+    /**
      * Execute raw query
      * Retries on timeout, because when jena stays idle for some time, sometimes throws a timeout error.
      *
@@ -56,6 +71,8 @@ class SparqlResourceManager
         return EasyRdf::graphToResourceCollection($result, $rdfType);
     }
 
+
+
     /**
      * Fetches a single resource matching the uri.
      * @param string $uri
@@ -64,11 +81,12 @@ class SparqlResourceManager
      */
     public function fetchByUri($uri, $type = null)
     {
-        $resource = new Uri($uri);
+        //$resource = new Uri($uri);
         $prefixes = [
-            'rdf' => RdfNamespace::NAME_SPACE
+            'rdf' => \App\OpenSkos\Namespaces\Rdf::NAME_SPACE
         ];
-        $serializedURI = (new NTriple)->serialize($resource);
+        //$serializedURI = (new NTriple)->serialize($resource);
+        $serializedURI = $uri;
         $qb = new \Asparagus\QueryBuilder($prefixes);
         $query = $qb->describe([$serializedURI, '?object'])
             ->where($serializedURI, '?property', '?object')->filterNotExists('?object', 'rdf:type', '?sometype');
