@@ -6,20 +6,19 @@ namespace App\Institution\Controller;
 
 use App\Institution\InstitutionRepository;
 use App\Rest\ListResponse;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 final class Institution
 {
     /**
      * @Route(path="/institutions", methods={"GET"})
+     *
      * @param InstitutionRepository $repository
+     *
      * @return JsonResponse
      */
-    public function institutions(InstitutionRepository $repository, Pagination $pagination) : JsonResponse
+    public function institutions(InstitutionRepository $repository): JsonResponse
     {
         $institutions = $repository->all();
         $properties = [];
@@ -28,6 +27,7 @@ final class Institution
         }
 
         $list = new ListResponse($properties, 0, count($properties));
+
         return new JsonResponse($list->toArray());
     }
 }

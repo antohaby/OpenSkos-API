@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "d65df88e6b69e0f97a9ca81e10c34181",
@@ -3289,16 +3289,16 @@
         },
         {
             "name": "phpro/grumphp",
-            "version": "v0.15.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpro/grumphp.git",
-                "reference": "5a6fd0ab90c9f837a7c79a5f61ef1b33f1ace8c1"
+                "reference": "362a7394a3f766c374b9062b6d393dd0d61ca87a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpro/grumphp/zipball/5a6fd0ab90c9f837a7c79a5f61ef1b33f1ace8c1",
-                "reference": "5a6fd0ab90c9f837a7c79a5f61ef1b33f1ace8c1",
+                "url": "https://api.github.com/repos/phpro/grumphp/zipball/362a7394a3f766c374b9062b6d393dd0d61ca87a",
+                "reference": "362a7394a3f766c374b9062b6d393dd0d61ca87a",
                 "shasum": ""
             },
             "require": {

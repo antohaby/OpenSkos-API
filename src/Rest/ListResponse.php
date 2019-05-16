@@ -1,10 +1,11 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\Rest;
 
-use Symfony\Component\HttpFoundation\Response;
-
-final class ListResponse {
+final class ListResponse
+{
     /**
      * @var array
      */
@@ -24,8 +25,7 @@ final class ListResponse {
         array $docs,
         int $total,
         int $offset
-    )
-    {
+    ) {
         $this->docs = $docs;
         $this->total = $total;
         $this->offset = $offset;
@@ -81,10 +81,12 @@ final class ListResponse {
 
     /**
      * TODO: Replace with Transformers for specific formats
-     * TODO: Look at https://symfony.com/doc/current/components/serializer.html
+     * TODO: Look at https://symfony.com/doc/current/components/serializer.html.
+     *
      * @return array
      */
-    public function toArray() : array {
+    public function toArray(): array
+    {
         return [
             'docs' => $this->docs,
             'total' => $this->total,

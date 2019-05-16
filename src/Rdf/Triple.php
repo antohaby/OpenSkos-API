@@ -1,8 +1,11 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\Rdf;
 
-final class Triple {
+final class Triple
+{
     /**
      * @var string
      */
@@ -46,6 +49,4 @@ final class Triple {
     {
         return $this->object;
     }
-
-
 }

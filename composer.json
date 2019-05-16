@@ -46,6 +46,18 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
+        ],
+        "grumphp": [
+            "./vendor/bin/grumphp run"
+        ],
+        "phpstan": [
+            "./vendor/bin/phpstan analyse src"
+        ],
+        "phpcs": [
+            "./vendor/bin/phpcs src"
+        ],
+        "phpcsfixer": [
+            "./vendor/bin/php-cs-fixer fix src"
         ]
     },
     "conflict": {

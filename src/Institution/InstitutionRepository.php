@@ -1,12 +1,13 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\Institution;
 
-interface  InstitutionRepository {
+interface InstitutionRepository
+{
     /**
      * @return Institution[]
      */
-    function all() : array ;
-
-
+    public function all(): array;
 }
